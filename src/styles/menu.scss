@@ -1,0 +1,116 @@
+@mixin titles {
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: .5s;
+    letter-spacing: 5px;
+}
+
+#menu {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 50px;
+    padding: 70px;
+    position: relative;
+
+    .menu {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        background-image: url("../photos/menu.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        h3 {
+            @include titles();
+            color: #93673b;
+            position: absolute;
+            top: 37%;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+    .lunch {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        background-image: url("../photos/lunch.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        h3 {
+            @include titles();
+            color: #234c3e;
+
+            &:hover {
+                color: #622417;
+            }
+        }
+    }
+    .alcohols {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        background-image: url("../photos/alcohol.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        h3 {
+           @include titles();
+           color: #cbc8c3;
+           top: 65%;
+
+           &:hover {
+               color: white;
+           }
+        }
+    }
+}
+
+.shape {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 2px;
+    background-color: white;
+    box-shadow: 0px 0px 21px 0px rgba(245,212,63,1);
+}
+
+.shape-top {
+    top: 270px;
+    transform: rotate(10deg);
+}
+.shape-bottom {
+    bottom: 255px;
+    transform: rotate(-10deg);
+}
+
+@media (max-width: 850px) {
+    #menu {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+
+        .menu {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+        }
+        .lunch {
+            grid-column: 1 / -1;
+            grid-row: 2 / 3;
+        }
+        .alcohols {
+            grid-column: 1 / -1;
+            grid-row: 3 / 4;
+        }
+    }
+}
