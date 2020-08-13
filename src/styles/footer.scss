@@ -100,6 +100,12 @@
     }
 }
 
+@media (max-width: 570px) {
+    .footer_info-container {
+        width: 95vw;
+    }
+}
+
 @media (max-width: 540px) {
     .footer_info-container {
         flex-direction: column;
