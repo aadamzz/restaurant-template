@@ -7,7 +7,6 @@
 }
 
 #contact {
-    width: 100vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 300px;
@@ -132,6 +131,10 @@
         .contact_map-container {
             grid-column: 1 / 2;
             grid-row: 3 / 4;
+
+            img {
+                width: 260px;
+            }
         }
 
         .contact_events-container {

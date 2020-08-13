@@ -6,10 +6,13 @@
     transform: translate(-50%,-50%);
     transition: .5s;
     letter-spacing: 5px;
+
+    @media (max-width: 850px) {
+        font-size: 50px;
+    }
 }
 
 #menu {
-    width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -78,7 +81,7 @@
 }
 
 .shape {
-    position: absolute;
+    position: fixed;
     z-index: -1;
     width: 100vw;
     height: 2px;
@@ -88,7 +91,7 @@
 
 .shape-top {
     top: 270px;
-    transform: rotate(10deg);
+    transform: rotate(50deg);
 }
 .shape-bottom {
     bottom: 255px;
@@ -99,6 +102,7 @@
     #menu {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
+        padding: 45px;
 
         .menu {
             grid-column: 1 / -1;
@@ -112,5 +116,15 @@
             grid-column: 1 / -1;
             grid-row: 3 / 4;
         }
+    }
+
+    .shape-top {
+        top: 350px;
+        transform: rotate(30deg);
+    }
+    
+    .shape-bottom {
+        bottom: 285px;
+        transform: rotate(-10deg);
     }
 }

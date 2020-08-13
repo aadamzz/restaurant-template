@@ -3,10 +3,6 @@ import './styles/main.scss';
 const hamburger = document.querySelector(".hamburger");
 const navigation = document.querySelector('.header_navigation-list');
 
-window.addEventListener('resize', () => {
-    console.log(window.innerWidth);
-})
-
 const handleClickBurger = () => {
     hamburger.classList.toggle('hamburger--active');
     navigation.classList.toggle("toggle_menu");
@@ -39,4 +35,3 @@ socialMediaIcons.forEach(icon => {
         event.currentTarget.style.stroke = "#fff";
     })
 })
-
