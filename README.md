@@ -1,18 +1,18 @@
-## Italian Restaurant website designed and created all by myself.
+# Italian Restaurant website designed and created all by myself. 🍕
 
-# Live demo: https://wizardly-dubinsky-115ada.netlify.app/
+## [Live](https://wizardly-dubinsky-115ada.netlify.app/) 
 
-# Technologies
+### Technologies
 * HTML
 * SCSS
 * JavaScript
 * Webpack
 
-# Installation
-Use npm install or yarn install to install needed dependencies
+### Installation
 
-# Run
-Use npm run start or yarn start to run it on local server
+Install the dependencies and devDependencies and start the server.
 
-# Build
-Use npm run build or yarn build to build application
+```sh
+$ npm install
+$ npm run start or yarn start
+```
